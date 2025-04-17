@@ -9,7 +9,6 @@ pipeline {
     parallelsAlwaysFailFast()
     rateLimitBuilds(throttle: [count: 3, durationName: 'minute', userBoost: false])
     buildDiscarder(logRotator(numToKeepStr: '100'))
-    ansiColor('xterm')
   }
 
   triggers {
