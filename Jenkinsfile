@@ -82,7 +82,7 @@ pipeline {
         checkout([
           $class: 'GitSCM',
           userRemoteConfigs: [[
-            url: 'https://github.com/HariSekhon/DevOps-Bash-tools',
+            url: 'https://github.com/pushpendrasingh3/DevOps-Bash-tools',
             credentialsId: '',
           ]],
           branches: [[name: '*/master']]
