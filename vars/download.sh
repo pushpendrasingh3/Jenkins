@@ -47,10 +47,10 @@ set -euo pipefail
 # in case we want to download into a different dir than where we store this download.sh
 #cd "$srcdir"
 
-url="https://raw.githubusercontent.com/HariSekhon/Jenkins/master/vars"
+url="https://raw.githubusercontent.com/pushpendrasingh3/Jenkins/master/vars"
 checkout=~/github/jenkins
 
-if git remote -v | grep -q '^origin[[:space:]].*HariSekhon/Jenkins'; then
+if git remote -v | grep -q '^origin[[:space:]].*pushpendrasingh3/Jenkins'; then
     echo "Running out of origin repo, aborting..."
     exit 1
 fi
@@ -68,7 +68,7 @@ fi
 if [ -d "$checkout" ]; then
     # only allow the use of the checkout if it's really the original origin
     pushd "$checkout" >/dev/null
-    if ! git remote -v 2>/dev/null | grep -qi 'origin.*harisekhon'; then
+    if ! git remote -v 2>/dev/null | grep -qi 'origin.*pushpendrasingh3'; then
         checkout=""
     fi
     popd >/dev/null

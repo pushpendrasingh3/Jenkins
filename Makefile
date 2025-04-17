@@ -4,16 +4,16 @@
 #
 #  vim:ts=4:sts=4:sw=4:noet
 #
-#  https://github.com/HariSekhon/Jenkins
+#  https://github.com/pushpendrasingh3/Jenkins
 #
 #  If you're using my code you're welcome to connect with me on LinkedIn and optionally send me feedback to help steer this or other code I publish
 #
-#  https://www.linkedin.com/in/HariSekhon
+#  https://www.linkedin.com/in/pushpendrasingh3
 #
 
 # For serious Makefiles see the DevOps Bash tools repo:
 #
-#	https://github.com/HariSekhon/DevOps-Bash-tools
+#	https://github.com/pushpendrasingh3/DevOps-Bash-tools
 #
 #	Makefile
 #	Makefile.in - generic include file with lots of Make targets
