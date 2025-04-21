@@ -324,7 +324,7 @@ pipeline {
     failure {
       echo 'Failure!'
       node {
-      sh 'echo "Pipeline failed!" > failure.txt'
+        sh 'echo "Pipeline failed!" > failure.txt'
       }
       echo 'FAILURE!'
       //Notify()
