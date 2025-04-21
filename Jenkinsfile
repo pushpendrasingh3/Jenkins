@@ -327,8 +327,7 @@ pipeline {
       //sh 'echo "Pipeline failed!" > failure.txt'
       //}
       echo 'FAILURE!'
-      echo `whoami` > output.txt
-      cat output.txt
+      sh  "whoami | cat "
       //Notify()
     }
     unstable {
