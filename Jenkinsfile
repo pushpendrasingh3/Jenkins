@@ -78,26 +78,26 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        milestone(ordinal: null, label: "Milestone: Checkout")
-        checkout(
-          [
-            $class: 'GitSCM',
-            userRemoteConfigs: [
+        script {
+          node {
+ 
+            milestone(ordinal: null, label: "Milestone: Checkout")
+            checkout(
               [
-                url: 'https://github.com/HariSekhon/DevOps-Bash-tools',
-                credentialsId: '',
-              ]
-            ],
-            branches: [
-              [
-                name: '*/master'
-              ]
-            ],
+                $class: 'GitSCM',
+                userRemoteConfigs: [
+                  [
+                    url: 'https://github.com/HariSekhon/DevOps-Bash-tools',
+                    credentialsId: '',
+                  ]
+              ],
             //doGenerateSubmoduleConfigurations: false,
             //extensions: [],
             //submoduleCfg: [],
-          ]
-        )
+              ]
+            )
+          }
+        }
       }
     }
 
