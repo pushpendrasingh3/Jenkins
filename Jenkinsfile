@@ -322,8 +322,12 @@ pipeline {
       Notify()
     }
     failure {
+      echo 'Failure!'
+      node {
+      sh 'echo "Pipeline failed!" > failure.txt'
+      }
       echo 'FAILURE!'
-      Notify()
+      //Notify()
     }
     unstable {
       echo 'UNSTABLE!'
