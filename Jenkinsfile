@@ -78,7 +78,7 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        node {  // Move node block here
+        node('checkout') {  // Move node block here
 
           milestone(ordinal: null, label: "Milestone: Checkout")
           checkout(
