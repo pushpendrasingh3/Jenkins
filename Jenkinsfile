@@ -78,29 +78,26 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        script {
-          node {
- 
-            milestone(ordinal: null, label: "Milestone: Checkout")
-            checkout(
-              [
-                $class: 'GitSCM',
-                userRemoteConfigs: [
-                  [
-                    url: 'https://github.com/HariSekhon/DevOps-Bash-tools',
-                    credentialsId: '',
-                  ]
+        node {  // Move node block here
+
+          milestone(ordinal: null, label: "Milestone: Checkout")
+          checkout(
+            [
+              $class: 'GitSCM',
+              userRemoteConfigs: [
+                [
+                  url: 'https://github.com/HariSekhon/DevOps-Bash-tools',
+                  credentialsId: '' // **Important:  Replace with your actual credential ID if needed!**
+                ]
               ],
-            //doGenerateSubmoduleConfigurations: false,
-            //extensions: [],
-            //submoduleCfg: [],
-              ]
-            )
-          }
-        }
+              //doGenerateSubmoduleConfigurations: false,
+              //extensions: [],
+              //submoduleCfg: [],
+            ]
+          )
+        } // End node block
       }
     }
-
     stage('Git Merge') {
       when {
         beforeAgent true
