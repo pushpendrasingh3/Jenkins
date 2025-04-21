@@ -330,7 +330,7 @@ pipeline {
       Notify()
     }
     failure {
-      node {
+      node('failure') {
         echo 'Failure!'
         //node {
         //sh 'echo "Pipeline failed!" > failure.txt'
