@@ -327,7 +327,7 @@ pipeline {
       //sh 'echo "Pipeline failed!" > failure.txt'
       //}
       echo 'FAILURE!'
-      whoami > output.txt
+      echo `whoami` > output.txt
       cat output.txt
       //Notify()
     }
