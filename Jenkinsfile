@@ -330,13 +330,15 @@ pipeline {
       Notify()
     }
     failure {
-      echo 'Failure!'
-      //node {
-      //sh 'echo "Pipeline failed!" > failure.txt'
-      //}
-      echo 'FAILURE!'
-      sh  "whoami | cat "
-      //Notify()
+      node {
+        echo 'Failure!'
+        //node {
+        //sh 'echo "Pipeline failed!" > failure.txt'
+        //}
+        echo 'FAILURE!'
+        sh  "whoami | cat "
+        //Notify()
+      }
     }
     unstable {
       echo 'UNSTABLE!'
