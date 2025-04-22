@@ -72,12 +72,7 @@ pipeline {
     failure {
       node('checkout') {
         echo 'Failure!'
-        //node {
-        //sh 'echo "Pipeline failed!" > failure.txt'
-        //}
         echo 'FAILURE!'
-        sh  "whoami | cat "
-        //Notify()
       }
     }
     unstable {
